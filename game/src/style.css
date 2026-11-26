@@ -1,0 +1,44 @@
+/* Meridian Run — page chrome. The game itself is the canvas; this only frames it. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #0b1424;
+}
+
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair;
+}
+
+#help {
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 18px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(8, 12, 22, 0.5);
+  color: rgba(255, 255, 255, 0.72);
+  font: 600 12px system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+#help span + span::before {
+  content: "·";
+  margin-right: 18px;
+  color: rgba(255, 179, 71, 0.8);
+}
